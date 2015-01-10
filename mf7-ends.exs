@@ -8,4 +8,16 @@ defmodule OddsAndEnds do
     System.get_env("SESSION")
   end
 
+  def get_extension(file) do
+    Path.extname(file)
+  end
+
+  def get_current_working_directory do
+    System.cwd
+  end
+
+  def issue_system_command(command) do
+    System.cmd("#{command}", [])
+  end
+
 end
